@@ -15,7 +15,7 @@ const EXPLORER_URL = "https://explorerl2new-grubby-red-rodent-a6u9rz8x70.t.condu
     const provider = new ethers.providers.JsonRpcProvider(RPC_URL);
     const signer = new ethers.Wallet.createRandom(provider);
     console.log("Random Wallet Address:", await signer.getAddress())
-    const httpRpcClient = new HttpRpcClient(STACKUP_BUNDLER_URL, ENTRY_POINT_CONTRACT, await provider.getNetwork().then(net => net.chainId))
+    const httpRpcClient = new HttpRpcClient(STACKUP_DEDICATED_BUNDLER_URL, ENTRY_POINT_CONTRACT, await provider.getNetwork().then(net => net.chainId))
 
     /* 
         With `STACKUP_DEDICATED_BUNDLER_URL`:  preVerificationGas: below expected gas of 139502
